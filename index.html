@@ -4,154 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameTrade Hub | Jual Beli Akun Game Terpercaya</title>
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .hero-bg {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
+        .hero-banner {
+            background: linear-gradient(90deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-overlay {
+            background: radial-gradient(circle at center, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.95) 100%);
         }
     </style>
 </head>
-<body class="bg-slate-100 font-sans text-slate-800">
+<body class="bg-slate-100 font-sans text-slate-800 antialiased min-h-screen flex flex-col justify-between">
 
-    <!-- NAVBAR -->
-    <nav class="bg-slate-900 text-white sticky top-0 z-50 shadow-md border-b border-slate-800">
+    <!-- TOP NAVIGATION BAR -->
+    <header class="bg-[#0b1120] text-white sticky top-0 z-50 border-b border-slate-800 shadow-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <!-- Logo -->
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-shield-halved text-orange-500 text-2xl"></i>
-                    <span class="font-bold text-xl tracking-wider text-white">GAMETRADE <span class="text-orange-500">HUB</span></span>
+                <!-- Brand Logo -->
+                <div class="flex items-center gap-2 cursor-pointer">
+                    <div class="bg-orange-600 text-white p-1.5 rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-shield-halved text-xl"></i>
+                    </div>
+                    <span class="font-extrabold text-lg tracking-wider text-white">GAMETRADE <span class="text-orange-500">HUB</span></span>
                 </div>
                 
-                <!-- Navigation Links -->
-                <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
-                    <a href="#" class="text-orange-500 border-b-2 border-orange-500 pb-1">Marketplace</a>
+                <!-- Main Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+                    <a href="#" class="text-orange-500 font-semibold border-b-2 border-orange-500 pb-1">Marketplace</a>
                     <a href="#" class="hover:text-white transition">Top Sellers</a>
                     <a href="#" class="hover:text-white transition">Sell Account</a>
-                    <a href="#" class="hover:text-white transition">Services <i class="fa-solid fa-chevron-down text-xs ml-1"></i></a>
+                    <a href="#" class="hover:text-white transition flex items-center gap-1">Services <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
                     <a href="#" class="hover:text-white transition">Support</a>
-                </div>
+                </nav>
 
                 <!-- Auth Buttons -->
                 <div class="flex items-center gap-3">
-                    <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-1.5 rounded text-sm transition">Sign Up</a>
-                    <a href="#" class="text-slate-300 hover:text-white font-semibold px-3 py-1.5 text-sm transition">Login</a>
+                    <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-1.5 rounded text-xs transition shadow-sm">Sign Up</a>
+                    <a href="#" class="text-slate-300 hover:text-white font-semibold px-3 py-1.5 text-xs transition">Login</a>
                 </div>
             </div>
         </div>
-    </nav>
+    </header>
 
-    <!-- HERO SECTION -->
-    <section class="hero-bg text-white py-12 px-4">
-        <div class="max-w-4xl mx-auto text-center space-y-4">
-            <h1 class="text-3xl md:text-4xl font-extrabold tracking-wide uppercase">
+    <!-- HERO SECTION BANNER -->
+    <section class="hero-banner text-white py-10 px-4 relative border-b border-slate-800">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10 space-y-3">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-black tracking-wider uppercase">
                 BELI & JUAL AKUN GAME TERPERCAYA
             </h1>
-            <p class="text-slate-300 text-sm md:text-base">
+            <p class="text-slate-300 text-xs sm:text-sm font-normal">
                 Temukan Akun Impian Anda di GameTrade Hub. Aman, Cepat, Terjamin.
             </p>
 
-            <!-- Search Bar -->
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-2 max-w-2xl mx-auto pt-4">
+            <!-- Search and Filter Bar -->
+            <div class="flex items-center justify-center gap-2 max-w-xl mx-auto pt-3">
                 <div class="relative w-full">
-                    <i class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-slate-400"></i>
-                    <input type="text" placeholder="Cari Game, Rank, Hero..." class="w-full pl-10 pr-4 py-2 rounded text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-slate-400 text-sm"></i>
+                    <input type="text" placeholder="Cari Game, Rank, Hero..." class="w-full pl-10 pr-4 py-2 rounded-md bg-white text-slate-900 text-xs focus:outline-none focus:ring-2 focus:ring-orange-500 shadow-inner">
                 </div>
-                <button class="w-full sm:w-auto bg-orange-500 hover:bg-orange-600 px-6 py-2 rounded font-semibold text-sm transition flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-filter"></i> Filter
+                <button class="bg-orange-500 hover:bg-orange-600 text-white px-5 py-2 rounded-md font-bold text-xs transition flex items-center gap-1.5 shrink-0 shadow">
+                    <i class="fa-solid fa-filter text-xs"></i> Filter
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- MAIN CONTENT -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+    <!-- MAIN MARKETPLACE CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 w-full flex-grow">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
             
-            <!-- LISTINGS SECTION (3 Columns on Large Screen) -->
-            <div class="lg:col-span-3 space-y-6">
-                <div class="flex justify-between items-center">
-                    <h2 class="text-xl font-bold uppercase text-slate-900 tracking-wide">Top Game Listings</h2>
-                    <button class="border border-slate-300 bg-white px-3 py-1 rounded text-xs font-semibold hover:bg-slate-50">
-                        <i class="fa-solid fa-sliders"></i> Filter
+            <!-- LEFT AREA: TOP GAME LISTINGS (3 Columns wide) -->
+            <div class="lg:col-span-3 space-y-4">
+                <div class="flex justify-between items-center pb-1">
+                    <h2 class="text-base font-extrabold uppercase text-slate-900 tracking-wide">TOP GAME LISTINGS</h2>
+                    <button class="border border-slate-300 bg-white px-3 py-1 rounded text-xs font-medium text-slate-600 hover:bg-slate-50 flex items-center gap-1">
+                        <i class="fa-solid fa-sliders text-[10px]"></i> Filter
                     </button>
                 </div>
 
-                <!-- Product Grid -->
+                <!-- Product Grid (4 items per row) -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                     
-                    <!-- Card 1 -->
-                    <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition">
-                        <div class="h-32 bg-slate-800 relative flex items-center justify-center text-white font-bold">
-                            <span class="text-blue-400 text-lg">MOBILE LEGENDS</span>
+                    <!-- Card 1: Mobile Legends -->
+                    <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="h-28 bg-slate-900 relative flex flex-col items-center justify-center p-2 text-center text-white">
+                                <span class="font-black text-sm tracking-wider text-amber-400">MOBILE LEGENDS</span>
+                                <span class="text-[10px] text-slate-400 uppercase tracking-widest mt-1">BANG BANG</span>
+                            </div>
+                            <div class="p-3 space-y-1.5">
+                                <h3 class="font-bold text-xs text-slate-900">Mobile Legends</h3>
+                                <p class="text-[11px] text-slate-500 font-medium">Mythic Glory</p>
+                                <p class="font-bold text-slate-900 text-xs">Rp 850,000</p>
+                                <span class="inline-flex items-center gap-1 bg-blue-50 text-blue-600 text-[10px] font-semibold px-2 py-0.5 rounded border border-blue-100">
+                                    <i class="fa-solid fa-circle-check text-[9px]"></i> Verified Seller
+                                </span>
+                            </div>
                         </div>
-                        <div class="p-3 space-y-2">
-                            <h3 class="font-bold text-sm">Mobile Legends</h3>
-                            <p class="text-xs text-slate-500">Mythic Glory</p>
-                            <p class="font-bold text-slate-900 text-sm">Rp 850,000</p>
-                            <span class="inline-block bg-blue-50 text-blue-600 text-[10px] font-semibold px-2 py-0.5 rounded">
-                                <i class="fa-solid fa-circle-check"></i> Verified Seller
-                            </span>
-                            <button class="w-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold py-1.5 rounded mt-2 transition">
+                        <div class="p-3 pt-0">
+                            <button class="w-full bg-[#0b1120] hover:bg-slate-800 text-white text-xs font-semibold py-1.5 rounded transition">
                                 Lihat Detail
                             </button>
                         </div>
                     </div>
 
-                    <!-- Card 2 -->
-                    <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition">
-                        <div class="h-32 bg-orange-900 relative flex items-center justify-center text-white font-bold">
-                            <span class="text-orange-400 text-lg">FREE FIRE</span>
+                    <!-- Card 2: Free Fire -->
+                    <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="h-28 bg-slate-800 relative flex flex-col items-center justify-center p-2 text-center text-white">
+                                <span class="font-black text-base tracking-wider text-orange-400">FREE FIRE</span>
+                            </div>
+                            <div class="p-3 space-y-1.5">
+                                <h3 class="font-bold text-xs text-slate-900">Free Fire</h3>
+                                <p class="text-[11px] text-slate-500 font-medium">Grandmaster</p>
+                                <p class="font-bold text-slate-900 text-xs">Rp 1,200,000</p>
+                                <span class="inline-flex items-center gap-1 bg-blue-50 text-blue-600 text-[10px] font-semibold px-2 py-0.5 rounded border border-blue-100">
+                                    <i class="fa-solid fa-circle-check text-[9px]"></i> Verified Seller
+                                </span>
+                            </div>
                         </div>
-                        <div class="p-3 space-y-2">
-                            <h3 class="font-bold text-sm">Free Fire</h3>
-                            <p class="text-xs text-slate-500">Grandmaster</p>
-                            <p class="font-bold text-slate-900 text-sm">Rp 1,200,000</p>
-                            <span class="inline-block bg-blue-50 text-blue-600 text-[10px] font-semibold px-2 py-0.5 rounded">
-                                <i class="fa-solid fa-circle-check"></i> Verified Seller
-                            </span>
-                            <button class="w-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold py-1.5 rounded mt-2 transition">
+                        <div class="p-3 pt-0">
+                            <button class="w-full bg-[#0b1120] hover:bg-slate-800 text-white text-xs font-semibold py-1.5 rounded transition">
                                 Lihat Detail
                             </button>
                         </div>
                     </div>
 
-                    <!-- Card 3 -->
-                    <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition">
-                        <div class="h-32 bg-slate-900 relative flex items-center justify-center text-white font-bold">
-                            <span class="text-yellow-500 text-lg">PUBG MOBILE</span>
+                    <!-- Card 3: PUBG Mobile -->
+                    <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="h-28 bg-slate-900 relative flex flex-col items-center justify-center p-2 text-center text-white">
+                                <span class="font-black text-sm tracking-wider text-yellow-500">PUBG MOBILE</span>
+                            </div>
+                            <div class="p-3 space-y-1.5">
+                                <h3 class="font-bold text-xs text-slate-900">PUBG Mobile</h3>
+                                <p class="text-[11px] text-slate-500 font-medium">Grandmaster</p>
+                                <p class="font-bold text-slate-900 text-xs">Rp 1,200,000</p>
+                                <span class="inline-flex items-center gap-1 bg-blue-50 text-blue-600 text-[10px] font-semibold px-2 py-0.5 rounded border border-blue-100">
+                                    <i class="fa-solid fa-circle-check text-[9px]"></i> Verified Seller
+                                </span>
+                            </div>
                         </div>
-                        <div class="p-3 space-y-2">
-                            <h3 class="font-bold text-sm">PUBG Mobile</h3>
-                            <p class="text-xs text-slate-500">Grandmaster</p>
-                            <p class="font-bold text-slate-900 text-sm">Rp 1,200,000</p>
-                            <span class="inline-block bg-blue-50 text-blue-600 text-[10px] font-semibold px-2 py-0.5 rounded">
-                                <i class="fa-solid fa-circle-check"></i> Verified Seller
-                            </span>
-                            <button class="w-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold py-1.5 rounded mt-2 transition">
+                        <div class="p-3 pt-0">
+                            <button class="w-full bg-[#0b1120] hover:bg-slate-800 text-white text-xs font-semibold py-1.5 rounded transition">
                                 Lihat Detail
                             </button>
                         </div>
                     </div>
 
-                    <!-- Card 4 -->
-                    <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition">
-                        <div class="h-32 bg-red-950 relative flex items-center justify-center text-white font-bold">
-                            <span class="text-red-500 text-lg">VALORANT</span>
+                    <!-- Card 4: Valorant -->
+                    <div class="bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition flex flex-col justify-between">
+                        <div>
+                            <div class="h-28 bg-slate-950 relative flex flex-col items-center justify-center p-2 text-center text-white">
+                                <span class="font-black text-base tracking-wider text-red-500">VALORANT</span>
+                            </div>
+                            <div class="p-3 space-y-1.5">
+                                <h3 class="font-bold text-xs text-slate-900">Valorant</h3>
+                                <p class="text-[11px] text-slate-500 font-medium">Ascendant</p>
+                                <p class="font-bold text-slate-900 text-xs">Rp 1,200,000</p>
+                                <span class="inline-flex items-center gap-1 bg-blue-50 text-blue-600 text-[10px] font-semibold px-2 py-0.5 rounded border border-blue-100">
+                                    <i class="fa-solid fa-circle-check text-[9px]"></i> Verified Seller
+                                </span>
+                            </div>
                         </div>
-                        <div class="p-3 space-y-2">
-                            <h3 class="font-bold text-sm">Valorant</h3>
-                            <p class="text-xs text-slate-500">Ascendant</p>
-                            <p class="font-bold text-slate-900 text-sm">Rp 1,200,000</p>
-                            <span class="inline-block bg-blue-50 text-blue-600 text-[10px] font-semibold px-2 py-0.5 rounded">
-                                <i class="fa-solid fa-circle-check"></i> Verified Seller
-                            </span>
-                            <button class="w-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold py-1.5 rounded mt-2 transition">
+                        <div class="p-3 pt-0">
+                            <button class="w-full bg-[#0b1120] hover:bg-slate-800 text-white text-xs font-semibold py-1.5 rounded transition">
                                 Lihat Detail
                             </button>
                         </div>
@@ -160,96 +183,144 @@
                 </div>
             </div>
 
-            <!-- SIDEBAR (1 Column on Large Screen) -->
-            <div class="space-y-6">
-                <!-- Featured Accounts -->
-                <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm space-y-3">
-                    <h3 class="font-bold text-sm border-b pb-2">Featured Accounts</h3>
+            <!-- RIGHT AREA: SIDEBAR (1 Column wide) -->
+            <div class="space-y-4">
+                
+                <!-- Featured Accounts Widget -->
+                <div class="bg-white p-3.5 rounded-lg border border-slate-200 shadow-sm space-y-3">
+                    <h3 class="font-bold text-xs text-slate-900 border-b border-slate-100 pb-2">Featured Accounts</h3>
+                    
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-slate-200 rounded flex items-center justify-center font-bold text-xs">ML</div>
-                        <div>
-                            <p class="font-semibold text-xs">Mobile Legends</p>
-                            <p class="text-xs text-slate-500">Rp 850,000</p>
+                        <div class="w-9 h-9 bg-amber-500 text-white rounded flex items-center justify-center font-bold text-[10px] shrink-0">
+                            MLBB
+                        </div>
+                        <div class="truncate">
+                            <p class="font-bold text-xs text-slate-800 truncate">Mobile Legends</p>
+                            <p class="text-xs text-slate-500 font-medium">Rp 850,000</p>
                         </div>
                     </div>
+
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-slate-200 rounded flex items-center justify-center font-bold text-xs">GI</div>
-                        <div>
-                            <p class="font-semibold text-xs">Genshin Impact</p>
-                            <p class="text-xs text-slate-500">Rp 850,000</p>
+                        <div class="w-9 h-9 bg-indigo-600 text-white rounded flex items-center justify-center font-bold text-[10px] shrink-0">
+                            GI
+                        </div>
+                        <div class="truncate">
+                            <p class="font-bold text-xs text-slate-800 truncate">Genshin Impact</p>
+                            <p class="text-xs text-slate-500 font-medium">Rp 850,000</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Latest Trades -->
-                <div class="bg-white p-4 rounded-lg border border-slate-200 shadow-sm space-y-3">
-                    <h3 class="font-bold text-sm border-b pb-2">Latest Trades</h3>
+                <!-- Latest Trades Widget -->
+                <div class="bg-white p-3.5 rounded-lg border border-slate-200 shadow-sm space-y-3">
+                    <h3 class="font-bold text-xs text-slate-900 border-b border-slate-100 pb-2">Latest Trades</h3>
+                    
                     <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-slate-800 text-white rounded flex items-center justify-center font-bold text-xs">COD</div>
-                        <div>
-                            <p class="font-semibold text-xs">Call of Duty</p>
-                            <p class="text-xs text-slate-500">Rp 1,200,000</p>
+                        <div class="w-9 h-9 bg-slate-900 text-white rounded flex items-center justify-center font-bold text-[10px] shrink-0">
+                            COD
+                        </div>
+                        <div class="truncate">
+                            <p class="font-bold text-xs text-slate-800 truncate">Call of Duty</p>
+                            <p class="text-xs text-slate-500 font-medium">Rp 1,200,000</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <div class="w-9 h-9 bg-slate-900 text-white rounded flex items-center justify-center font-bold text-[10px] shrink-0">
+                            COD
+                        </div>
+                        <div class="truncate">
+                            <p class="font-bold text-xs text-slate-800 truncate">Call of Duty</p>
+                            <p class="text-xs text-slate-500 font-medium">Rp 1,200,000</p>
                         </div>
                     </div>
                 </div>
+
             </div>
 
         </div>
 
-        <!-- WHY CHOOSE US SECTION -->
+        <!-- FEATURES SECTION -->
         <section class="mt-12 pt-8 border-t border-slate-200">
-            <h2 class="text-center font-bold text-lg mb-6 uppercase tracking-wide">Mengapa Beli di GameTrade Hub?</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <h2 class="text-center font-black text-xs md:text-sm uppercase text-slate-900 tracking-wider mb-6">
+                MENGAPA BELI DI GAMETRADE HUB?
+            </h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+                
                 <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-shield-halved text-2xl text-slate-700"></i>
+                    <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-800 shrink-0">
+                        <i class="fa-solid fa-shield-halved text-base"></i>
+                    </div>
                     <div>
-                        <h4 class="font-bold text-xs">Keamanan Terjamin</h4>
+                        <h4 class="font-bold text-xs text-slate-900">Keamanan Terjamin</h4>
                         <p class="text-[11px] text-slate-500">Safe Transaction serjamin</p>
                     </div>
                 </div>
+
                 <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-user-check text-2xl text-slate-700"></i>
+                    <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-800 shrink-0">
+                        <i class="fa-solid fa-user-check text-base"></i>
+                    </div>
                     <div>
-                        <h4 class="font-bold text-xs">Akun Terverifikasi</h4>
+                        <h4 class="font-bold text-xs text-slate-900">Akun Terverifikasi</h4>
                         <p class="text-[11px] text-slate-500">Verified Accounts akun</p>
                     </div>
                 </div>
+
                 <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-headset text-2xl text-slate-700"></i>
+                    <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-800 shrink-0">
+                        <i class="fa-solid fa-headset text-base"></i>
+                    </div>
                     <div>
-                        <h4 class="font-bold text-xs">Layanan 24/7</h4>
+                        <h4 class="font-bold text-xs text-slate-900">Layanan 24/7</h4>
                         <p class="text-[11px] text-slate-500">24/7 Support monugam</p>
                     </div>
                 </div>
+
                 <div class="flex items-center gap-3">
-                    <i class="fa-solid fa-bolt text-2xl text-slate-700"></i>
+                    <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-800 shrink-0">
+                        <i class="fa-solid fa-bolt text-base"></i>
+                    </div>
                     <div>
-                        <h4 class="font-bold text-xs">Transaksi Cepat</h4>
+                        <h4 class="font-bold text-xs text-slate-900">Transaksi Cepat</h4>
                         <p class="text-[11px] text-slate-500">Fast Trade dan persenahan</p>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="bg-white border-t border-slate-200 mt-12 py-6 text-xs text-slate-500">
-        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex gap-4">
+    <!-- FOOTER SECTION -->
+    <footer class="bg-white border-t border-slate-200 py-4 text-xs text-slate-500 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-4">
                 <a href="#" class="hover:underline">About</a>
                 <a href="#" class="hover:underline">Terms</a>
                 <a href="#" class="hover:underline">Policy</a>
             </div>
-            <div>GameTrade Hub</div>
-            <div class="flex items-center gap-2">
-                <span class="bg-blue-600 text-white font-bold px-2 py-0.5 rounded text-[10px]">DANA</span>
-                <span class="bg-purple-600 text-white font-bold px-2 py-0.5 rounded text-[10px]">OVO</span>
-                <span class="bg-blue-500 text-white font-bold px-2 py-0.5 rounded text-[10px]">BCA</span>
-                <span class="bg-blue-800 text-white font-bold px-2 py-0.5 rounded text-[10px]">VISA</span>
+
+            <div class="font-semibold text-slate-700">
+                GameTrade Hub
             </div>
-            <div>Copyright © 2024</div>
+
+            <div class="flex items-center gap-1.5">
+                <span class="bg-blue-500 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">DANA</span>
+                <span class="bg-purple-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">OVO</span>
+                <span class="bg-sky-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">GOPAY</span>
+                <span class="bg-blue-800 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">BCA</span>
+                <span class="bg-blue-900 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">VISA</span>
+                <span class="bg-orange-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded">MASTER</span>
+            </div>
+
+            <div>
+                Copyright © 2024
+            </div>
+
         </div>
     </footer>
 
 </body>
-  </html>
+</html>
